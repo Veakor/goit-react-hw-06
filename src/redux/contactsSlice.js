@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    items: []
+    name: ''
   },
   reducers: {
     addContact: (state, action) => {
@@ -17,6 +17,6 @@ const contactsSlice = createSlice({
 
 export const { addContact, deleteContact } = contactsSlice.actions;
 
-export const selectContacts = state => state.contacts.items;
+export const selectContacts  = state => state.contacts.items;
 
 export default contactsSlice.reducer;
