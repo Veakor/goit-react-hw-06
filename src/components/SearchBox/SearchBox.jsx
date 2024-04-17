@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
-
 import clsx from "clsx";
 import css from "./SearchBox.module.css";
 
@@ -11,25 +10,21 @@ const SearchBox = () => {
   const onChangeFilter = (event) => {
     dispatch(changeFilter(event.target.value));
   };
+
   return (
     <div>
-      <h2 className={clsx(css.titleFilter)}>Search contacts</h2>
       <input
         className={clsx(css.inputFilter)}
         type="text"
         value={selectNameFilter}
         onChange={onChangeFilter}
+        placeholder="Search contacts" 
       />
     </div>
   );
 };
+
 export default SearchBox;
-
-
-
-
-
-
 
 
 

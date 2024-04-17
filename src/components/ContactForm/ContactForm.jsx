@@ -57,7 +57,6 @@ const ContactForm = () => {
             className={clsx(css.labelInput)}
             type="tel"
             name="number"
-            placeholder="123-45-67"
           />
           <ErrorMessage component="p" name="number" />
         </label>
