@@ -1,21 +1,31 @@
-import { useSelector } from 'react-redux';
-import { selectContacts } from '../../redux/contactsSlice';
-import { selectNameFilter } from '../../redux/filtersSlice';
+import { useSelector } from "react-redux";
+import { useMemo } from "react";
+
+import Contact from "../Contact/Contact";
+
+import clsx from "clsx";
+import css from "./ContactList.module.css";
 
 const ContactList = () => {
-  const contacts = useSelector(selectContacts);
-  const filter = useSelector(selectNameFilter);
+  const selectContacts = useSelector((state) => state.contacts.items);
+  const selectNameFilter = useSelector((state) => state.filters.name);
 
-  const filteredContacts = contacts.filter(item => item.name.toLowerCase().includes(filter.toLowerCase()));
+  const filteredContacts = useMemo(
+    () =>
+      selectContacts.filter((contact) => {
+        return contact.name
+          .toLowerCase()
+          .includes(selectNameFilter.toLowerCase());
+      }),
+    [selectNameFilter, selectContacts]
+  );
 
   return (
-    <ul>
-      {filteredContacts.map(contact => (
-        <li key={contact.id}>
-          <p>Name: {contact.name}</p>
-          <p>Number: {contact.number}</p>
-        </li>
-      ))}
+    <ul className={clsx(css.contactsList)}>
+      {Array.isArray(filteredContacts) &&
+        filteredContacts.map((contact) => {
+          return <Contact key={contact.id} contact={contact} />;
+        })}
     </ul>
   );
 };

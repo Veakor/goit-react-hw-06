@@ -1,31 +1,32 @@
-.contact {
-    width: 300px;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 10px;
-    border: 2px solid #161515;
-    margin-bottom: 10px;
-  }
-  
-  .contact-details {
-    display: flex;
-    flex-direction: column; 
-  }
-  
-  .contact-name {
-    margin: 0;
-  }
-  
-  .contact-number {
-    margin: 0;
-  }
-  
-  .contact-button {
-    padding: 5px 10px;
-    background-color: #bcb7b7;
-    color: #111010;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.contactBox {
+  width: 230px;
+  height: 60px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(79, 80, 82);
+  border: 1px solid #fff;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactList {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.contactItem {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contactButton {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
