@@ -17,10 +17,7 @@ const mailBoxSchema = Yup.object().shape({
   number: Yup.string()
     .required("Contact number is required!")
     .min(3, "Your contact number must be more than 3 characters!")
-    .matches(
-      /^\d{3}-\d{2}-\d{2}$/,
-      `Invalid phone number format! Use "-", for example 123-45-67`
-    ),
+  
 });
 
 const ContactForm = () => {
