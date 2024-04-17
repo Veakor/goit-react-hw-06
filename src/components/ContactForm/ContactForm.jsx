@@ -65,7 +65,7 @@ const ContactForm = () => {
           <ErrorMessage component="p" name="number" />
         </label>
         <button className={clsx(css.formButton)} type="submit">
-          Add new contact
+          Add contact
         </button>
       </Form>
     </Formik>

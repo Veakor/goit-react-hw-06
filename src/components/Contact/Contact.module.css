@@ -3,8 +3,8 @@
   height: 60px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: rgb(79, 80, 82);
-  border: 1px solid #fff;
+  background-color: rgb(248, 244, 247);
+  border: 1px solid #111111;
   border-radius: 16px;
 
   display: flex;
@@ -25,7 +25,7 @@
 }
 
 .contactButton {
-  border: 1px solid #fff;
+  border: 1px solid #131312;
   border-radius: 8px;
   padding: 6px;
   cursor: pointer;

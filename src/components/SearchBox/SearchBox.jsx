@@ -13,7 +13,7 @@ const SearchBox = () => {
   };
   return (
     <div>
-      <h2 className={clsx(css.titleFilter)}>Find contacts by name</h2>
+      <h2 className={clsx(css.titleFilter)}>Search contacts</h2>
       <input
         className={clsx(css.inputFilter)}
         type="text"
